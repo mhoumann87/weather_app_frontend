@@ -8,12 +8,12 @@
       href='https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto+Slab&display=swap'
       rel='stylesheet'
     />
+    <title>Weather App - About</title>
     <link
       rel='shortcut icon'
       href='./assets/images/favicon.ico'
       type='image/x-icon'
     />
-    <title>Weather App</title>
     <link rel='stylesheet' href='./assets/css/main.css' />
   </head>
   <body>
@@ -22,11 +22,11 @@
 
     <header>
       <div class='container'>
-        <h1><a href='/'>Weather App</a></h1>
+        <h1><a href='/'>Weather App - {{title}}</a></h1>
         <nav>
           <ul>
-            <li><a href='/' class='active'>Home</a></li>
-            <li><a href='/about'>About</a></li>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/about' class='active'>About</a></li>
             <li><a href='/weather'>Weather</a></li>
             <li><a href='/help'>Help</a></li>
           </ul>
@@ -36,12 +36,12 @@
 
     <div class='container'>
       <main>
-        <h1>{{title}}</h1>
-        <h2>{{name}}</h2>
+        <h2>{{title}}</h2>
       </main>
     </div>
 
     <!-- I have made a simple js script to add to the project, that display the content of the id's with copy and contact. This is just to add and use a js file in the Node Server -->
+
     <footer>
       <div class='container'>
         <p id='copy'></p>

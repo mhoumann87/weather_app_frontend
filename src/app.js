@@ -18,7 +18,22 @@ app.use(express.static(path.join(publicDir)));
 app.set('view engine', 'hbs');
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', {
+    title: 'Weather',
+    name: 'Michael Houmann',
+  });
+});
+
+app.get('/about', (req, res) => {
+  res.render('about', {
+    title: 'About',
+  });
+});
+
+app.get('/help', (req, res) => {
+  res.render('help', {
+    title: 'Help',
+  });
 });
 
 app.get('/weather', (req, res) => {
