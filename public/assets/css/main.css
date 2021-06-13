@@ -1,0 +1,129 @@
+/* Set up the variables */
+:root {
+  /* Colors */
+  --background: #ebebeb;
+  --elm-bg: #cbcdb3;
+  --link: #81989e;
+  --hover: #5e7e7e;
+  --font-color: #474554;
+
+  /* Fonts */
+  --main-font: 'Oswald', sans-serif;
+  --heading-font: 'Roboto Slab', serif;
+  --normal: 400;
+  --bold: 700;
+}
+
+/* Reset browser defaults */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img,
+svg,
+canvas,
+iframe {
+  border: none;
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+/* Basic styles */
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading-font);
+}
+
+a {
+  color: var(--link);
+  transition: all 0.25s ease-in-out;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: var(--hover);
+}
+
+/* Elements */
+
+body {
+  background-color: var(--background);
+  background-image: url('../images/double-bubble.png');
+  background-repeat: repeat;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 'header' 'main' 'footer';
+  min-height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--background);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem 1rem 2rem;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+header h1 a {
+  color: var(--font-color);
+}
+
+header h1 a:hover,
+header h1 a:focus,
+header h1 a:active {
+  color: var(--font-color);
+}
+
+header ul {
+  list-style-type: none;
+  display: flex;
+}
+
+header li {
+  font-size: 1.5rem;
+}
+
+header .active {
+  color: var(--hover);
+  text-decoration: underline;
+}
+
+header li a:hover,
+header li a:focus,
+header li a:active {
+  text-decoration: underline;
+  color: var(--hover);
+}
+
+header li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--background);
+  text-align: center;
+}
