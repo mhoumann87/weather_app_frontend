@@ -23,6 +23,7 @@
 
 body {
   margin: 0;
+  font-size: 16px;
 }
 
 img,
@@ -36,6 +37,15 @@ iframe {
 }
 
 /* Basic styles */
+
+/* The container is used to set a max-width for the page. I want the 
+   the background color and background image to be used on all sizes,
+   that is why the max-width isn't set on the body. */
+
+.container {
+  width: 100%;
+  max-width: 112.5rem;
+}
 
 h1,
 h2,
@@ -66,16 +76,20 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-areas: 'header' 'main' 'footer';
   min-height: 100vh;
+  font-family: var(--main-font);
 }
 
 header {
   grid-area: header;
   background-color: var(--background);
   width: 100%;
+
+  padding: 0 2rem 1rem 2rem;
+}
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem 1rem 2rem;
 }
 
 header h1 {
@@ -120,6 +134,8 @@ header li:not(:last-child) {
 
 main {
   grid-area: main;
+  width: 80%;
+  margin: 1rem auto;
 }
 
 footer {
