@@ -4,7 +4,7 @@ const path = require('path');
 const express = require('express');
 
 // Setup const to hold port
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3005;
 // Setup const to hold path to public directory
 const publicDir = path.join(__dirname, '../public');
 
@@ -13,6 +13,13 @@ const app = express();
 
 // Set the project to serve static files
 app.use(express.static(path.join(publicDir)));
+
+// Set view engine to handelbars
+app.set('view engine', 'hbs');
+
+app.get('/', (req, res) => {
+  res.render('index');
+});
 
 app.get('/weather', (req, res) => {
   res.send({
