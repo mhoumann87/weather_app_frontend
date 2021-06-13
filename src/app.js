@@ -14,14 +14,6 @@ const app = express();
 // Set the project to serve static files
 app.use(express.static(path.join(publicDir)));
 
-// app.get('/help', (req, res) => {
-//   res.sendFile(publicDir, '/help.html');
-// });
-
-// app.get('/about', (req, res) => {
-//   res.sendFile(publicDir, 'about.html');
-// });
-
 app.get('/weather', (req, res) => {
   res.send({
     forecast: 'snowing',
