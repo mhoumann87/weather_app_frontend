@@ -2,6 +2,7 @@
 const path = require('path');
 // import dependencies
 const express = require('express');
+const hbs = require('hbs');
 
 // Initialize express in an const
 const app = express();
@@ -13,7 +14,9 @@ const port = process.env.PORT || 3005;
 // Setup const to hold path to public directory
 const publicDir = path.join(__dirname, '../public');
 // Set up path to template directory
-const viewDir = path.join(__dirname, '../templates');
+const viewDir = path.join(__dirname, '../templates/views');
+// Path to partials
+const partialsDir = path.join(__dirname, '../templates/partials');
 
 // Set the project to serve static files
 app.use(express.static(path.join(publicDir)));
@@ -23,6 +26,8 @@ app.use(express.static(path.join(publicDir)));
 app.set('view engine', 'hbs');
 // set the directory for the handlebar files
 app.set('views', viewDir);
+// Setup hbs to use partials
+hbs.registerPartials(partialsDir);
 
 // Setup routes for the site
 
