@@ -33,7 +33,7 @@ hbs.registerPartials(partialsDir);
 
 app.get('/', (req, res) => {
   res.render('index', {
-    title: 'Weather',
+    title: 'Home',
     name: 'Michael Houmann',
   });
 });
@@ -50,10 +50,24 @@ app.get('/help', (req, res) => {
   });
 });
 
+app.get('/help/*', (req, res) => {
+  res.render('404', {
+    title: 'Not found',
+    page: 'Help article not found',
+  });
+});
+
 app.get('/weather', (req, res) => {
   res.send({
     forecast: 'snowing',
     temperature: -10.9,
+  });
+});
+
+app.get('*', (req, res) => {
+  res.render('404', {
+    title: 'Not found',
+    page: 'Page is not found',
   });
 });
 

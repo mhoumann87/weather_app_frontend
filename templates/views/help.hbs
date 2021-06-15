@@ -8,7 +8,7 @@
       href='https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto+Slab&display=swap'
       rel='stylesheet'
     />
-    <title>Weather App - Help</title>
+    <title>Weather App - {{title}}</title>
     <link
       rel='shortcut icon'
       href='./assets/images/favicon.ico'
@@ -20,19 +20,10 @@
     <!-- The div with the container is there to limit the max page width. It is inside the header and footer, because I want the background color to fill up the screen at all sizes, and that is 
     also why I just don't set the max width on the body. I also want the background image to take up all widths -->
 
-    <header>
-      <div class='container'>
-        <h1><a href='/'>Weather App - {{title}}</a></h1>
-        <nav>
-          <ul>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/about'>About</a></li>
-            <li><a href='/weather'>Weather</a></li>
-            <li><a href='/help' class='active'>Help</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+  <!-- Insert the header partial -->
+
+  {{>header}}
+
     <div class='container'>
       <main>
         <h2>{{title}}</h2>
@@ -41,12 +32,8 @@
 
     <!-- I have made a simple js script to add to the project, that display the content of the id's with copy and contact. This is just to add and use a js file in the Node Server -->
 
-    <footer>
-      <div class='container'>
-        <p id='copy'></p>
-        <p id='contact'></p>
-      </div>
-    </footer>
+  <!-- Insert the footer partial -->
+  {{>footer}}
 
     <script src='./assets/js/scripts.js'></script>
   </body>
