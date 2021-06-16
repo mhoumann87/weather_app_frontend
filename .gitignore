@@ -119,3 +119,6 @@ dist
 
 # Prettier config file
 .prettierrc
+
+# api-keys
+api-keys.js
