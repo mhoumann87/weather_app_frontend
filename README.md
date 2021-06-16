@@ -11,3 +11,4 @@ Dependencies:
 - express
 - express-hbs
 - nodemon
+- postman-request
