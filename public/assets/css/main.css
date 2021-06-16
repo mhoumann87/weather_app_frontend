@@ -138,8 +138,12 @@ main {
   margin: 1rem auto;
 }
 
-footer {
+footer .container {
+  width: 100%;
   grid-area: footer;
   background-color: var(--background);
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 2rem 1rem;
 }

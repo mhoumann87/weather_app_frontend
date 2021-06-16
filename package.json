@@ -2,7 +2,7 @@
   "name": "weather_app_frontend",
   "version": "1.0.0",
   "description": "Front end to the weather app",
-  "main": "app.js",
+  "main": "src/app.js",
   "repository": "git@github.com:mhoumann87/weather_app_frontend.git",
   "author": "Michael Houmann <mhoumann87@gmail.com>",
   "license": "MIT",
@@ -14,6 +14,6 @@
     "nodemon": "^2.0.7"
   },
   "scripts": {
-    "dev": "nodemon src/app.js"
+    "dev": "nodemon"
   }
 }
