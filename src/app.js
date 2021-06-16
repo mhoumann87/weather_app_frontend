@@ -4,6 +4,10 @@ const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
 
+// Ger geo code and wether
+const geoCode = require('./utils/geocode');
+const weather = require('./utils/weather');
+
 // Initialize express in an const
 const app = express();
 
@@ -65,8 +69,6 @@ app.get('/weather', (req, res) => {
   }
 
   res.send({
-    forecast: 'snowing',
-    temperature: -10.9,
     address: req.query.address,
   });
 });
